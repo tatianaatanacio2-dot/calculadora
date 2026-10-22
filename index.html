@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8e9f4">
+  <meta name="description" content="Calculadora científica kawaii con historial, memoria y funciones avanzadas.">
+  <title>Berry — Calculadora científica</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="app-header">
+      <div class="identity">
+        <div class="app-mark" aria-hidden="true"><span>♡</span><i>✦</i></div>
+        <div><p class="eyebrow">TU COMPAÑERA DE CÁLCULO</p><h1>Berry <span>calculadora</span></h1></div>
+      </div>
+      <button class="icon-button" id="history-toggle" aria-label="Ver historial" title="Historial">◷</button>
+    </header>
+
+    <section class="calculator" aria-label="Calculadora científica">
+      <div class="screen">
+        <div class="screen-meta"><span class="live-indicator"><i></i> LISTA PARA CALCULAR</span><button id="angle-mode" class="angle-toggle" aria-label="Cambiar a radianes">DEG <span>⌄</span></button></div>
+        <div class="expression" id="expression" aria-live="polite">0</div>
+        <output class="result" id="result" aria-label="Resultado" role="status">0</output>
+        <div class="screen-bottom"><span id="memory-indicator" class="memory-indicator"></span><span>✧ precisión inteligente</span></div>
+      </div>
+
+      <div class="memory-row" aria-label="Memoria">
+        <button class="memory-key" data-action="memory-clear">MC</button><button class="memory-key" data-action="memory-recall">MR</button><button class="memory-key" data-action="memory-add">M+</button><button class="memory-key" data-action="memory-subtract">M−</button><button class="memory-key" data-action="memory-store">MS</button>
+      </div>
+
+      <section class="keypad" aria-label="Teclado de la calculadora">
+        <button class="key function" data-function="sin">sin</button><button class="key function" data-function="cos">cos</button><button class="key function" data-function="tan">tan</button><button class="key function" data-value="(" aria-label="Abrir paréntesis">(</button><button class="key function" data-value=")" aria-label="Cerrar paréntesis">)</button>
+        <button class="key function" data-function="asin">sin⁻¹</button><button class="key function" data-function="acos">cos⁻¹</button><button class="key function" data-function="atan">tan⁻¹</button><button class="key function" data-function="sqrt">√</button><button class="key function" data-value="^2">x²</button>
+        <button class="key function" data-function="ln">ln</button><button class="key function" data-function="log">log</button><button class="key function" data-value="^">xʸ</button><button class="key function" data-value="!">n!</button><button class="key function" data-value="π">π</button>
+        <button class="key utility" data-action="clear">AC</button><button class="key utility" data-action="delete" aria-label="Borrar último carácter">⌫</button><button class="key utility" data-value="%">%</button><button class="key operator" data-value="÷">÷</button><button class="key operator" data-value="×">×</button>
+        <button class="key number" data-value="7">7</button><button class="key number" data-value="8">8</button><button class="key number" data-value="9">9</button><button class="key operator" data-value="−">−</button><button class="key operator" data-value="+">+</button>
+        <button class="key utility" data-action="sign" aria-label="Cambiar signo">+/−</button><button class="key number" data-value="4">4</button><button class="key number" data-value="5">5</button><button class="key number" data-value="6">6</button><button class="key utility" data-value=".">.</button>
+        <button class="key number" data-value="0">0</button><button class="key number" data-value="1">1</button><button class="key number" data-value="2">2</button><button class="key number" data-value="3">3</button><button class="key equals" data-action="equals" aria-label="Calcular resultado">=</button>
+      </section>
+      <footer><span>Hecha con <b>♥</b> para mentes curiosas</span><span>Berry v2.0</span></footer>
+    </section>
+    <aside class="history-panel" id="history-panel" aria-label="Historial de cálculos" hidden>
+      <div class="history-heading"><div><p class="eyebrow">TUS ÚLTIMOS CÁLCULOS</p><h2>Historial <span>♡</span></h2></div><button id="clear-history" class="clear-history">Borrar</button></div>
+      <div id="history-list" class="history-list"><p class="empty-history">Tus cálculos aparecerán aquí ✨</p></div>
+    </aside>
+  </main>
+</body>
+</html>
